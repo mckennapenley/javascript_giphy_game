@@ -1,5 +1,4 @@
-// randomWords = ['cheeseburger', 'florida', 'potato', 'cat'];
-// let randomWord = 'cheeseburger';
+ randomWords = ["cheeseburger", "florida", "potato", "cat"];
 
 const $giph1 = $("#giph1");
 const $giph2 = $("#giph2");
@@ -8,36 +7,35 @@ const $giph3 = $("#giph3");
 // const $input = $("input[type=text]");
 
 function handleGetData() {
-    //prevent default behavior of a form
-    // event.preventDefault();
-  
-    // userInput = $input.val();
-  
-    $.ajax({
-      url: `https://api.giphy.com/v1/gifs/search?api_key=G7tdOAm3RVKG0bSk2wKHNZ3Brpb99YBt&q=cheeseburger&limit=3`,
-    }).then(
-      (data) => {
-    //   if (data.Response == "False"){
-    //       alert('Movie not Found!');
-    //   }
-        render(data);
-        
-        
-      },
-      (error) => {
-        console.log("bad request: ", error);
-      }
-    );
-  }
+  //get random num
+  const randomNum = Math.floor(Math.random() * randomWords.length);
+
+  //use random num to pull search term 
+  let randomWord = randomWords[randomNum];
+
+  //prevent default behavior of a form
+  // event.preventDefault();
+
+  // userInput = $input.val();
+
+  $.ajax({
+    url: `https://api.giphy.com/v1/gifs/search?api_key=G7tdOAm3RVKG0bSk2wKHNZ3Brpb99YBt&q=${randomWord}&limit=3`,
+  }).then(
+    (data) => {
+      render(data);
+    },
+    (error) => {
+      console.log("bad request: ", error);
+    }
+  );
+}
 // handleGetData()
 
+$("#start-btn").on("click", handleGetData);
 
-  $("#start-btn").on("click", handleGetData);
-
-  function render(dataFromAJAX) {
-    $giph1.attr("src", dataFromAJAX.data[0].images.fixed_width.url);
-    $giph2.attr("src", dataFromAJAX.data[1].images.fixed_width.url);
-    $giph3.attr("src", dataFromAJAX.data[2].images.fixed_width.url);
-        
-  }
-
+function render(dataFromAJAX) {
+  $("img").attr("src", "");
+  $giph1.attr("src", dataFromAJAX.data[0].images.fixed_width.url);
+  $giph2.attr("src", dataFromAJAX.data[1].images.fixed_width.url);
+  $giph3.attr("src", dataFromAJAX.data[2].images.fixed_width.url);
+}
