@@ -35,9 +35,9 @@ function handleGetData() {
   $("#start-btn").on("click", handleGetData);
 
   function render(dataFromAJAX) {
-    $giph1.attr("src", dataFromAJAX.data[0].images.original.url);
-    $giph2.attr("src", dataFromAJAX.data[1].images.original.url);
-    $giph3.attr("src", dataFromAJAX.data[2].images.original.url);
+    $giph1.attr("src", dataFromAJAX.data[0].images.fixed_width.url);
+    $giph2.attr("src", dataFromAJAX.data[1].images.fixed_width.url);
+    $giph3.attr("src", dataFromAJAX.data[2].images.fixed_width.url);
         
   }
 
