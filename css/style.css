@@ -1,3 +1,80 @@
-li {
-    list-style: none;
+header {
+    background-color:aquamarine;
+    color: teal;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    font-family: 'Permanent Marker', cursive;
+    align-items:center;
 }
+
+body {
+    margin: 0px;
+}
+
+header button {
+    background-color: teal;
+    border: none;
+    border-radius: 1.25rem;
+    color: white;
+    height: 5vh;
+    font-size: 2vh; 
+    align-self: center;
+    font-family: 'Permanent Marker', cursive;
+}
+
+main {
+    background-color: violet;
+    height: 80vh;
+}
+
+#gifs {
+    height: 80vh;
+    /* text-align: center; */
+    /* max-height: 80vh; */
+    display: flex;
+    flex-flow: column nowrap;
+    /* flex-wrap: nowrap; */
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 1px;
+}
+
+
+form {
+    background-color: violet;
+    height: 10vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+    
+}
+
+#guess-box {
+    height: 2.5vh;
+    width: 20vh;
+    border:none;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+#enter-guess {
+    height: 3vh;
+    width: 9vh;
+    border-radius: 1.25rem;
+    border: none;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+@media only screen and (min-width: 400px) {
+    #gifs {
+        align-items: center;
+    }   
+    
+  }
+
+  
