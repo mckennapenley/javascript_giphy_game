@@ -25,6 +25,11 @@ const $input = $("input[type=text]");
 // const $input = $("input[type=text]");
 
 function generateGame() {
+
+  //clear input box
+  $input.val("")
+  //set input box color back to white
+  $('#guess-box').css("background-color", "white")
   //get random num
   const randomNum = Math.floor(Math.random() * randomWords.length);
 
@@ -88,12 +93,15 @@ function getGuess(event) {
 
 $("form").on("submit", getGuess);
 
-$("#give-up").on("click", giveUp);
 
-function giveUp (){
-  $answer.show()
-}
-  
+$("#give-up-btn").mousedown(function(){
+$answer.show()
+})
+$("#give-up-btn").mouseup(function() {
+  $answer.hide()
+})
+
+
 
 
 

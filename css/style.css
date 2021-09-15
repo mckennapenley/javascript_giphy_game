@@ -66,9 +66,28 @@ form {
 }
 
 #give-answer{
-  height: 25px;
+  font-family: "Permanent Marker", cursive;
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  /* margin-top: 5px; */
+  /* margin-bottom: 5px; */
+  
+}
+
+#give-up-btn{
+  background-color: teal;
+  /* height: 25px;
+  width: 150; */
+  margin-top: 5px;
+  border-radius: 10px;
+  border: none;
+  font-family: "Permanent Marker", cursive;
+}
+
+#answer{
+  margin: 5px;
 }
 
 @media only screen and (min-width: 400px) {
