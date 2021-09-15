@@ -1,80 +1,71 @@
 header {
-    background-color:aquamarine;
-    color: teal;
-    display: flex;
-    justify-content: space-between;
-    height: 10vh;
-    font-family: 'Permanent Marker', cursive;
-    align-items:center;
+  background-color: aquamarine;
+  color: teal;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+  height: 50px;
+  font-family: "Permanent Marker", cursive;
+  align-items: center;
 }
 
 body {
-    margin: 0px;
+  background-color: violet;
+  margin: 0px;
 }
 
 header button {
-    background-color: teal;
-    border: none;
-    border-radius: 1.25rem;
-    color: white;
-    height: 5vh;
-    font-size: 2vh; 
-    align-self: center;
-    font-family: 'Permanent Marker', cursive;
-}
-
-main {
-    background-color: violet;
-    height: 80vh;
+  background-color: teal;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  height: 30px;
+  font-size: 14px;
+  align-self: center;
+  font-family: "Permanent Marker", cursive;
 }
 
 #gifs {
-    height: 80vh;
-    /* text-align: center; */
-    /* max-height: 80vh; */
-    display: flex;
-    flex-flow: column nowrap;
-    /* flex-wrap: nowrap; */
-    justify-content: space-evenly;
-    align-items: stretch;
-    gap: 1px;
+  /* text-align: center; */
+  /* max-height: 80vh; */
+  display: flex;
+  flex-flow: column nowrap;
+  /* flex-wrap: nowrap; */
+  justify-content:space-between;
+  align-items:center;
+  gap: 1px;
 }
 
+#giph1, #giph2, #giph3{
+  min-height: 200px;
+}
 
 form {
-    background-color: violet;
-    height: 10vh;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    
-    
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
 #guess-box {
-    height: 2.5vh;
-    width: 20vh;
-    border:none;
-    font-family: 'Permanent Marker', cursive;
-
+  height: 25px;
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Permanent Marker", cursive;
 }
 
 #enter-guess {
-    height: 3vh;
-    width: 9vh;
-    border-radius: 1.25rem;
-    border: none;
-    font-family: 'Permanent Marker', cursive;
-
+  height: 25px;
+  width: 150;
+  border-radius: 10px;
+  border: none;
+  font-family: "Permanent Marker", cursive;
 }
 
 @media only screen and (min-width: 400px) {
-    #gifs {
-        align-items: center;
-    }   
-    
+  #gifs {
   }
-
-  
+}
