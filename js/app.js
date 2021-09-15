@@ -8,10 +8,14 @@ randomWords = [
   "banana",
   "space",
   "pizza",
-  "paris",
+  "dinosaur",
+  "carrot",
+  "pizza",
+  "forrest",
 ];
 
 let randomWord;
+let $answer;
 
 const $giph1 = $("#giph1");
 const $giph2 = $("#giph2");
@@ -27,6 +31,12 @@ function generateGame() {
   //use random num to pull search term
   randomWord = randomWords[randomNum];
 
+  //hide the answer 
+  $answer = $('#answer')
+  $answer.hide()
+  // assign random word to the answer
+  $answer.text(`Answer: ${randomWord}`);
+  
   //create random offset to pass into api call
   const randomOffset = Math.floor(Math.random() * 1000);
   //prevent default behavior of a form
@@ -77,3 +87,13 @@ function getGuess(event) {
 }
 
 $("form").on("submit", getGuess);
+
+$("#give-up").on("click", giveUp);
+
+function giveUp (){
+  $answer.show()
+}
+  
+
+
+

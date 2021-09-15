@@ -65,6 +65,12 @@ form {
   font-family: "Permanent Marker", cursive;
 }
 
+#give-answer{
+  height: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
 @media only screen and (min-width: 400px) {
   #gifs {
   }
