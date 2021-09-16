@@ -28,7 +28,7 @@ header button {
 #instructions{
   font-family: "Permanent Marker", cursive;
   align-items: center;
-  font-size: 30px;
+  font-size: 25px;
   /* text-align: center; */
   display: flex;
   flex-flow: column nowrap;
@@ -47,13 +47,14 @@ header button {
   justify-content: space-between;
   align-items: center;
   gap: 1px;
+  min-height: 600px;
 }
 
-#giph1,
+/* #giph1,
 #giph2,
 #giph3 {
   min-height: 200px;
-}
+} */
 
 form {
   margin-top: 1px;
@@ -126,9 +127,11 @@ form {
   padding: 0px;
 }
 
-@media only screen and (min-width: 400px) {
-  #gifs {
+/* @media only screen and (min-width: 750px) {
+  #game-view {
+    min-height: 1000px
+    
   }
-}
+} */
 
 

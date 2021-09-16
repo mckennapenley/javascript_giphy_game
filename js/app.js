@@ -33,6 +33,10 @@ randomWords = [
   "bread",
   "knitting",
   "rainbow",
+  "disgusting",
+  "worried",
+  "salad",
+  "scared"
 ];
 
 let randomWord;
@@ -93,7 +97,9 @@ function generateGame() {
     }
   );
   $('#instructions').hide();
-  $('#gameView').show();
+  $('#giph1').show();
+  $('#giph2').show();
+  $('#giph3').show();
 }
 // handleGetData()
 
