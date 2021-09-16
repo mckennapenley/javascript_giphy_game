@@ -36,6 +36,7 @@ header button {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-around;
+  min-height: 615px
   /* text-decoration:double; */
 
 }

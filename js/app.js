@@ -36,7 +36,8 @@ randomWords = [
   "disgusting",
   "worried",
   "salad",
-  "scared"
+  "scared",
+  "dust"
 ];
 
 let randomWord;
@@ -51,7 +52,7 @@ let guessesLeft = 5;
 let isWinner = false;
 let isGameStarted = false;
 
-$('gameView.hide').hide()
+$('#gifs').hide()
 
 // const $input = $("input[type=text]");
 
@@ -97,9 +98,8 @@ function generateGame() {
     }
   );
   $('#instructions').hide();
-  $('#giph1').show();
-  $('#giph2').show();
-  $('#giph3').show();
+  $('#gifs').show();
+  
 }
 // handleGetData()
 
