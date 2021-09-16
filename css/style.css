@@ -25,6 +25,8 @@ header button {
   font-family: "Permanent Marker", cursive;
 }
 
+
+
 #instructions{
   font-family: "Permanent Marker", cursive;
   align-items: center;
@@ -46,15 +48,16 @@ header button {
   /* flex-wrap: nowrap; */
   justify-content: space-between;
   align-items: center;
-  gap: 1px;
+  gap: 5px;
   min-height: 600px;
+  margin-top: 5px;
 }
 
-/* #giph1,
+#giph1,
 #giph2,
 #giph3 {
   min-height: 200px;
-} */
+}
 
 form {
   margin-top: 1px;
