@@ -18,16 +18,31 @@
   </head>
   <body>
     <header>
-      <h1>GIPHY GAME</h1>
-      <button id="start-btn">Start a New Game!</button>
+      <h1>GIPHY GUESS</h1>
+      <button id="start-btn">New Game</button>
     </header>
 
-    <div id ='game-area'>
+    <div id ="instructions">
+      <p>Instructions:</p>
+      <ul>
+        <li>click "New Game" to begin</li>
+        <li>You will see 3 GIFS that share a one-word search term</li>
+        <li>Guess the search term in the box below</li>
+        <li>You will have 5 tries to guess the correct term</li>
+        <li>Click "Give Up" to forfeit and reveal the answer</li>
+      </ul>
+    </div>
+
+
+<div id ="gameView">   
     <div id="gifs">
       <img id="giph1" />
       <img id="giph2" />
       <img id="giph3" />
       </div>
+
+      
+      <p id = "guess-count"></p>
 
       <form>
         <input id="guess-box" type="text" placeholder="Enter Your Guess" />
@@ -38,7 +53,13 @@
       <button id="give-up-btn">Give Up</button>
       <p id="answer"></p>
       </div>
-     </div>
+
+      <p id = "win-lose"></p>
+    </div> 
+
+      
+      
+     
 
 
     

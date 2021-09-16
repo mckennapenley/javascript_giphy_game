@@ -11,7 +11,28 @@ randomWords = [
   "dinosaur",
   "carrot",
   "pizza",
-  "forrest",
+  "cupcake",
+  "party",
+  "snail",
+  "sneeze",
+  "hoverboard",
+  "cowbell",
+  "jam",
+  "wedding",
+  "taco",
+  "macarena",
+  "queen",
+  "hula",
+  "nature",
+  "angry",
+  "hug",
+  "zoom",
+  "alien",
+  "surfboard",
+  "spicy",
+  "bread",
+  "knitting",
+  "rainbow",
 ];
 
 let randomWord;
@@ -21,29 +42,41 @@ const $giph1 = $("#giph1");
 const $giph2 = $("#giph2");
 const $giph3 = $("#giph3");
 const $input = $("input[type=text]");
+let guessCount = 0;
+let guessesLeft = 5;
+let isWinner = false;
+let isGameStarted = false;
+
+$('gameView.hide').hide()
 
 // const $input = $("input[type=text]");
 
 function generateGame() {
+  isWinner = false;
+  isGameStarted = true;
+  guessCount = 0;
+  guessesLeft = 5;
+  $("#guess-count").text(`Guesses Left: 5`);
+  $("#win-lose").text("");
 
   //clear input box
-  $input.val("")
+  $input.val("");
   //set input box color back to white
-  $('#guess-box').css("background-color", "white")
+  $("#guess-box").css("background-color", "white");
   //get random num
   const randomNum = Math.floor(Math.random() * randomWords.length);
 
   //use random num to pull search term
   randomWord = randomWords[randomNum];
 
-  //hide the answer 
-  $answer = $('#answer')
-  $answer.hide()
+  //hide the answer
+  $answer = $("#answer");
+  $answer.hide();
   // assign random word to the answer
   $answer.text(`Answer: ${randomWord}`);
-  
+
   //create random offset to pass into api call
-  const randomOffset = Math.floor(Math.random() * 1000);
+  const randomOffset = Math.floor(Math.random() * 100);
   //prevent default behavior of a form
   // event.preventDefault();
 
@@ -59,10 +92,13 @@ function generateGame() {
       console.log("bad request: ", error);
     }
   );
+  $('#instructions').hide();
+  $('#gameView').show();
 }
 // handleGetData()
 
 $("#start-btn").on("click", generateGame);
+
 
 function render(dataFromAJAX) {
   $("img").attr("src", "");
@@ -74,34 +110,51 @@ function render(dataFromAJAX) {
 function getGuess(event) {
   //prevent default behavior of a form
   event.preventDefault();
-
-  userInput = $input.val();
-
-  if (userInput !== randomWord) {
-    $("#guess-box")
-      .fadeOut(100)
-      .fadeIn(100)
-      .fadeOut(100)
-      .fadeIn(100);
-  } else if (userInput === randomWord) {
-    $("#guess-box").css("background-color", "green");
-    setTimeout(function () {
-      alert("You Win!");
-    }, 100);
+  userInput = $input.val().toLowerCase();
+  if (isWinner) {
+    return;
   }
+  if (isGameStarted){
+
+  if (userInput !== "") {
+    if (guessesLeft > 0) {
+      guessCount++;
+      guessesLeft = 5 - guessCount;
+      $("#guess-count").text(`Guesses Left: ${guessesLeft}`);
+    }
+
+    if (guessesLeft > 0 && userInput !== randomWord) {
+      wrongAnswerResponse();
+    } else if (guessesLeft >= 0 && userInput === randomWord) {
+      winGame();
+    } else if (guessesLeft === 0 && userInput !== randomWord) {
+      loseGame();
+    }
+  }
+}
 }
 
 $("form").on("submit", getGuess);
 
+$("#give-up-btn").click(function () {
+  if (!isWinner){
+  $answer.show();
+  loseGame();
+  guessesLeft = 0;
+  $("#guess-count").text(`Guesses Left: ${guessesLeft}`);
+}});
 
-$("#give-up-btn").mousedown(function(){
-$answer.show()
-})
-$("#give-up-btn").mouseup(function() {
-  $answer.hide()
-})
+function wrongAnswerResponse() {
+  $("#guess-box").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
 
+  $("form").trigger("reset")
+}
 
+function loseGame() {
+  $("#win-lose").text("Game Over - You Lose!");
+}
 
-
-
+function winGame() {
+  isWinner = true;
+  $("#win-lose").text("Winner!");
+}
