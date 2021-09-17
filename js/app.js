@@ -144,7 +144,7 @@ $("form").on("submit", getGuess);
 
 $("#give-up-btn").click(function () {
   if (!isWinner){
-  $answer.show();
+  // $answer.show();
   loseGame();
   guessesLeft = 0;
   $("#guess-count").text(`Guesses Left: ${guessesLeft}`);
@@ -158,6 +158,7 @@ function wrongAnswerResponse() {
 
 function loseGame() {
   $("#win-lose").text("Game Over - You Lose!");
+  $answer.show();
 }
 
 function winGame() {
