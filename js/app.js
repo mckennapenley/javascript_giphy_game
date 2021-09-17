@@ -37,7 +37,15 @@ randomWords = [
   "worried",
   "salad",
   "scared",
-  "dust"
+  "dust",
+  "confused",
+  "fuzzy",
+  "beautiful",
+  "sandy",
+  "DJ",
+  "explosion",
+  "sparkle",
+  "model"
 ];
 
 let randomWord;
