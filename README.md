@@ -22,7 +22,7 @@ Giphy Guess is a one-player game in which the user is presented with 3 GIFs that
 ![Game play](images/game_play_view.png)
 
 ## Getting Started:
-[Click Here](project1-giphy-game.vercel.app) to see the deployed app.
+[Click Here](https://project1-giphy-game.vercel.app/) to see the deployed app.
 
 
 ## Future Enhancements:
