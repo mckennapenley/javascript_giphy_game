@@ -12,7 +12,7 @@ Giphy Guess is a one-player game in which the user is presented with 3 GIFs that
 * Giphy API
 
 ## Screenshots:
-![Wireframes] (http://i.imgur.com/a/rjcvoyM.jpg)
+![Giphy Guess wireframes](images/Wireframes.png)
 
 
 ## Getting Started:
