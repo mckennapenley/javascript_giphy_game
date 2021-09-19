@@ -41,7 +41,6 @@ const randomWords = [
   "confused",
   "fuzzy",
   "beautiful",
-  "sandy",
   "dj",
   "explosion",
   "sparkle",
