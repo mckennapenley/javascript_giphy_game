@@ -26,28 +26,20 @@ header button {
   margin-right: 5px;
 }
 
-
-
-#instructions{
+#instructions {
   font-family: "Permanent Marker", cursive;
   align-items: center;
   font-size: 25px;
-  /* text-align: center; */
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-around;
-  min-height: 615px
-  /* text-decoration:double; */
-
+  min-height: 615px;
 }
 
 #gifs {
-  /* text-align: center; */
-  /* max-height: 80vh; */
   display: flex;
   flex-flow: column nowrap;
-  /* flex-wrap: nowrap; */
   justify-content: space-between;
   align-items: center;
   gap: 5px;
@@ -103,8 +95,6 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* height: 25px;
-  width: 150; */
   margin-top: 5px;
   margin-left: 15px;
   border-radius: 10px;
@@ -112,26 +102,24 @@ form {
   font-family: "Permanent Marker", cursive;
   height: 25px;
   width: 150;
-  
 }
 
-#game-messages{
+#game-messages {
   font-family: "Permanent Marker", cursive;
-  display:flex;
+  display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content:center;
-  padding:0px;
+  justify-content: center;
+  padding: 0px;
 }
 
-#play-again{
+#play-again {
   margin-left: 20px;
 }
 
 #answer {
   margin-top: 5px;
 }
-
 
 #guess-count {
   font-family: "Permanent Marker", cursive;
@@ -143,27 +131,10 @@ form {
   margin-bottom: 0px;
 }
 
-/* #win-lose {
-  font-family: "Permanent Marker", cursive;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0px;
-}  */
 
-#play-again{
+
+#play-again {
   background-color: teal;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* height: 25px;
-  width: 150; */
-  /* margin-top: 5px; */
-  /* margin-left: 15px; */
   border-radius: 10px;
   border: none;
   font-family: "Permanent Marker", cursive;
@@ -176,7 +147,7 @@ form {
     box-shadow: 0 0 5px teal;
   }
   50% {
-    background-color:turquoise;
+    background-color: turquoise;
     box-shadow: 0 0 20px turquoise;
   }
   100% {
@@ -187,12 +158,4 @@ form {
 #play-again {
   animation: glowing 1300ms infinite;
 }
-
-/* @media only screen and (min-width: 750px) {
-  #game-view {
-    min-height: 1000px
-    
-  }
-} */
-
 
