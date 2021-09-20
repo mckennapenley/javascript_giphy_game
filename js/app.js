@@ -98,7 +98,9 @@ function generateGame() {
 
 function render(dataFromAJAX) {
   
-  $("img").attr("src", "");
+  $giph1.attr("src", "");
+  $giph2.attr("src", "");
+  $giph3.attr("src", "");
 
   
   $giph1.attr("src", dataFromAJAX.data[0].images.fixed_height.url);
